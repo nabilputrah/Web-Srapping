@@ -512,7 +512,8 @@ mark {
 }
 
 .img-fluid {
-    max-width: 50%;
+    max-width: 40%;
+    margin-left: 23px;
     height: auto
 }
 
