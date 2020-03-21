@@ -1,3 +1,4 @@
+
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -511,7 +512,7 @@ mark {
 }
 
 .img-fluid {
-    max-width: 100%;
+    max-width: 50%;
     height: auto
 }
 
