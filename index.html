@@ -222,6 +222,38 @@
     });
 </script>
 
+<script>
+     $(document).ready(function(){
+        $.getJSON('planetban.json',function(data){
+            var datascrap_data = '';
+                datascrap_data += "<div class='row'>"
+           
+            $.each(data, function(key, value) {
+                datascrap_data +="<div class='col-lg-3 col-md-6'>";
+                datascrap_data +="<div class='single-product'>";
+                datascrap_data +='<img class="img-fluid"src="'+value.brand_img+'"><br>';
+                datascrap_data +='<img class="img-fluid"src="'+value.thumb_img+'">';
+                datascrap_data +="<div class='product-details'>";
+                datascrap_data +='<h6>'+value.type+'</h6>';
+                datascrap_data +='<br>';
+                datascrap_data +='<h6>'+value.name+'</h6>';
+                datascrap_data +="<div class='price'>";
+                datascrap_data += '<h6>price    : '+value.price+'</h6>';
+                datascrap_data += '<br>';
+                datascrap_data += '<h6>brand    : '+value.brand+'</h6>';    
+                datascrap_data +="</div>";
+                datascrap_data +="</div>";
+                datascrap_data +="</div>";
+                datascrap_data +="</div>";
+                
+                            });
+            datascrap_data += "</div>";              
+            $('#scrapper').append(datascrap_data);
+        });
+    });
+</script>
+
+
 <div id="headline"></div>
 
 
