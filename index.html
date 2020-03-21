@@ -229,7 +229,39 @@
 });
 </script> 
 
-                        <div id="scrapper" style="margin-left: 100px;"></div>
+<div id="scrapper" style="margin-left: 100px;"></div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+ $(document).ready(function(){
+    $.getJSON('shopee.json',function(data){
+        var scrap_data = '';
+            scrap_data += "<div class='row'>"
+       
+        $.each(data, function(key, value) {
+            scrap_data +="<div class='col-lg-30 col-md-10'>";
+            scrap_data +="<div class='single-product'>";
+            scrap_data +="<div class='product-details'>";
+            scrap_data +='<h6> Model :'+value.Model+'</h6>';
+            scrap_data +="<div class='price'>";
+            scrap_data +='<h6> Harga :'+value.Harga+'</h6><br>';
+            scrap_data += '<h6>Terjual    : '+value.Terjual+'</h6><br>';    
+            scrap_data += '<h6>Kota: '+value.Kota+'</h6>';
+            scrap_data += '<br>';
+            scrap_data +="</div>";
+            scrap_data +="</div>";
+            scrap_data +="</div>";
+            scrap_data +="</div>";
+            
+                        });
+        scrap_data += "</div>";              
+        $('#shopee').append(scrap_data);
+    });
+});
+</script> 
+<br> 
+<div id="shopee"></div>
 
 
 
